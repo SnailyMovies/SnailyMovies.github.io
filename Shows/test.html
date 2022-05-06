@@ -107,28 +107,9 @@ div.content {
   <div>
     
 <div style="position:absolute; top: 55px; left: 210px;">
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<video id="video"></video>
-<script>
-  if(Hls.isSupported()) {
-    var video = document.getElementById('video');
-    var hls = new Hls();
-    hls.loadSource('http://cdncities.com/deranalive/deranalive/playlist.m3u8');
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
- }
- // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
- // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
- // This is using the built-in support of the plain video element, without using hls.js.
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'http://cdncities.com/deranalive/deranalive/playlist.m3u8';
-    video.addEventListener('canplay',function() {
-      video.play();
-    });
-  }
-</script>
+<video width="352" height="198" controls>
+    <source src="https://c-2.mzzcloud.life/_v8/299937d948619284515fcfa797293e98de1eb3ec6da654d84a7acb1c62ac34c72b2ec97db28e1a52ff89254d265478659dfea277b3918dbecd84dda7aa7e8a139fa08e1e012bf2d0e76b1aca1a2d5b7f29b5e508f7287394c01be2a17a7f2d37cf0d7485f6b811e1f011ae234b0eb6b0210f2f76451cc691e2247b1d38f8e4fb/playlist.m3u8" type="application/x-mpegURL">
+</video>
   
   <!--<video tabindex="-1" disableremoteplaybawebkick="" t-playsinline="" playsinline="" preload="metadata" src="https://c-2.mzzcloud.life/_v8/299937d948619284515fcfa797293e98de1eb3ec6da654d84a7acb1c62ac34c72b2ec97db28e1a52ff89254d265478659dfea277b3918dbecd84dda7aa7e8a139fa08e1e012bf2d0e76b1aca1a2d5b7f29b5e508f7287394c01be2a17a7f2d37cf0d7485f6b811e1f011ae234b0eb6b0210f2f76451cc691e2247b1d38f8e4fb/playlist.m3u8" style="object-fit: fill;"></video>
   
