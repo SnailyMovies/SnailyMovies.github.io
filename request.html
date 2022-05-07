@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>SnailyMovies</title>
+<title>SnailyGames</title>
 <head>
-  <script async src="https://arc.io/widget.min.js#c7kVikx6"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2033675061826667"
+     crossorigin="anonymous"></script>
+
+  <script async src="https://arc.io/widget.min.js#ad7ZgW5u"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/image/favivon.ico">
 </head>
 <style>
 body {
@@ -68,8 +72,8 @@ body {
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
-  padding: 1px 16px;
-  height: 670px;
+  padding: 5px 16px;
+  height: 630px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -84,47 +88,71 @@ div.content {
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
 }
+#wrap {
+    /* Your styling. */
+    position: absolute;
+    z-index: 999999;
+     top: -200px;
+    left: 470px;
+    height: 100%;
+    text-align: center;
+
+    display: table;
+}
+
+#inside {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+ #wrap2 {
+    /* Your styling. */
+    position: absolute;
+      z-index: 6;
+     top: 400px;
+    left: 400px;
+    height: 100%;
+    text-align: center;
+
+    display: table;
+}
+
+#inside2 {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+}
+.ontop {
+z-index: 7;
+}
 </style>
 
-<header>
-
-</header>
 <!-- The sidebar -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body ng-app="">
 
-<div ng-include="'/sidebar.html'"></div>
+<div ng-include="'sidebar.html'"></div>
+
+ 
 <!-- Page content -->
 <div class="content">
 <body style="background-color:grey;">
+<div id=wrap>
+  <div id=inside>
+  </div> 
 </div>
-  <div>
+
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDnERQVERb7Nwdh85sS-ABlzMkzs7lqea1V9WVoeSKIvXsWQ/viewform?usp=sf_link" 
+       width="640" height="600" frameborder="0" marginheight="100" marginwidth="100">Loading…</iframe>
+ 
     
-<div style="position:absolute; top: 55px; left: 210px;">
-<!-- CSS  -->
- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-
-
-<!-- HTML -->
-<video id='hls-example'  class="video-js vjs-default-skin" width="1150" height="650" controls>
-<source type="application/x-mpegURL" src="           ">
-</video>
-
-<!-- JS code -->
-<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
-
-<script>
-var player = videojs('hls-example');
-player.play();
-</script>
-  </div>
 </body>
 </html>
